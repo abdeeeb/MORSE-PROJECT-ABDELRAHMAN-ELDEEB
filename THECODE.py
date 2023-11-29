@@ -30,3 +30,14 @@ def dcrypt_morse(morse):
             text += ' '
         else:text += '#'
     return text
+
+def start_morse_app():
+    print("THE MORSE CODE APP")
+    while true: 
+        user_choice = input("choose an action:\n'@' for encryption)\n'*' for decryption\n'%' to Exit\n").upper()
+
+        if user_choice == '@':
+            plaintext = input("enter the text to encrypt")
+            encrypted_text = encrypt_to_morse(plaintext)
+            print(f"encrypted text: {encrypted_text}\n")
+        elif userchoice == '@'
