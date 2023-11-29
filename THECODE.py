@@ -18,3 +18,15 @@ def ecrpt_morse(text)
             morse_code.appd(' ')
     return ' '.join(morse_code)
 
+def dcrypt_morse(morse):
+    morse = morse.split(' ')
+    text = ''
+
+    reverse_morse_dict = {code: char for char, code inn morse_dict.items()}
+    for symbol in morse:
+        if symbol in reverse_morse_dict:
+            text+= reverse_morse_dict[symbol]
+        elif symbol == '/':
+            text += ' '
+        else:text += '#'
+    return text
