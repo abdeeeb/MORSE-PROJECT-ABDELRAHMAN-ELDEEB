@@ -15,7 +15,7 @@ def ecrpt_morse(text):                               #defining the encryption fu
         if char in morse_dict:
             morse_code.append(morse_dict[char])
         else: 
-            morse_code.appd(' ')
+            morse_code.append(' ')
     return ' '.join(morse_code)                      
 
 def dcrypt_morse(morse):
