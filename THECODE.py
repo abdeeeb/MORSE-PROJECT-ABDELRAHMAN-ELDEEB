@@ -20,7 +20,7 @@ def ecrpt_morse(text):                               #defining the encryption fu
 
 def dcrypt_morse(morse):
     morse = morse.split(' ')
-    text = ''
+    text = ' '
 
     reverse_morse_dict = {code: char for char, code in morse_dict.items()}
     for symbol in morse:
