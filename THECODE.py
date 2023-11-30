@@ -7,7 +7,7 @@ morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '.
                    ' ': ' '
                    }
 
-def ecrpt_morse(text)
+def ecrpt_morse(text):
     text = text.upper()
     morse_code = []
 
@@ -22,7 +22,7 @@ def dcrypt_morse(morse):
     morse = morse.split(' ')
     text = ''
 
-    reverse_morse_dict = {code: char for char, code inn morse_dict.items()}
+    reverse_morse_dict = {code: char for char, code in morse_dict.items()}
     for symbol in morse:
         if symbol in reverse_morse_dict:
             text+= reverse_morse_dict[symbol]
@@ -33,11 +33,22 @@ def dcrypt_morse(morse):
 
 def start_morse_app():
     print("THE MORSE CODE APP")
-    while true: 
+    while True: 
         user_choice = input("choose an action:\n'@' for encryption)\n'*' for decryption\n'%' to Exit\n").upper()
 
         if user_choice == '@':
-            plaintext = input("enter the text to encrypt")
-            encrypted_text = encrypt_to_morse(plaintext)
+            plaintext = input("enter the text to encrypt:")
+            encrypted_text = ecrpt_morse(plaintext)
             print(f"encrypted text: {encrypted_text}\n")
-        elif userchoice == '@'
+        elif user_choice == '*':
+            morse_code = input ("Enter morse code to decrypt (after every character add a space in between, for space in between words put a space after the last character then '/' then another space after '/'):")
+            decrypted_text = dcrypt_morse(morse_code)
+            print(f"decrypted text: {decrypted_text}\n")
+        elif user_choice == '%':
+            print("thank you. goodbye!")
+            break
+        else:
+            print("Unknown option. Please choose '@' for Encryption, '*' for Decryption, or '%' to Exit.\n")
+
+if __name__ == "__main__":
+    start_morse_app()
