@@ -1,4 +1,4 @@
-morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',                #The dictionary used to map out all the numbers and letters 
+morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',                 
                    'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.',
                    'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
                    'Y': '-.--', 'Z': '--..',
@@ -7,11 +7,11 @@ morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '.
                    ' ': ' '
                    }
 
-def ecrpt_morse(text):                               #defining the encryption function and making sure any input turns into uppercase letters
+def ecrpt_morse(text):                               
     text = text.upper()
     morse_code = []
 
-    for char in text:                                #iterates through every charecter in the text to check if the charcter exists in the dictionary 
+    for char in text:                               
         if char in morse_dict:
             morse_code.append(morse_dict[char])
         else: 
